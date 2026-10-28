@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ivory text-brown font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-mg {
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12;
+  }
+  .skeleton {
+    @apply bg-gradient-to-r from-beige-light via-beige to-beige-light bg-[length:1000px_100%] animate-shimmer;
+  }
+  .eyebrow {
+    @apply text-xs font-medium tracking-[0.25em] text-gold uppercase;
+  }
+  .eyebrow-light {
+    @apply text-xs font-medium tracking-[0.25em] text-gold-light uppercase;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EDE3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4C0A8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A15B;
+}
+
+/* Selection color */
+::selection {
+  background: #C6A15B;
+  color: #FFF9F2;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid #C6A15B;
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
